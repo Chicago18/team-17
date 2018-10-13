@@ -1,6 +1,6 @@
 INSERT INTO users(username, fullname, location, email, company, affiliation, password, img_url)
 VALUES
-('jonny', 'Jonny Chow', 'Michigan', 'jonnny@umich.edu', 'JP Morgan', 'Straight', 'password', 'ben10.png');
+('jonny', 'Jonny Chow', 'Michigan', 'jonnny@umich.edu', 'JP Morgan', 'Straight', 'password', 'face9.jpg');
 
 INSERT INTO resources(name, body, person)
 VALUES
@@ -19,9 +19,9 @@ VALUES
 
 INSERT INTO testimony(name, title, location, affiliation, company, email, img_url)
 VALUES
-('Carissa Watson', 'My Experience as a Bisexual Woman in Fintech Industry Has Been A Positive One', 'New York', 'Gay', 'JP', 'dave@gmail.com', 'pfp.png'),
-('Heidi Weber', 'As a Lesbian in the South Working in a Tech Comany, it is Easy to Feel Out of Place', 'San Francisco', 'Gay', 'Sprite', 'jack@gmail.com', 'pfp.png'),
-('Sam Chapman', 'As a Young man in Washington DC, It is Not Easy Being Queer', 'China', 'Lesbian', 'Coke', 'june@gmail.com', 'pfp.png'),
-('Jacob Schneider', 'Being Trans Man in the Midwest Makes Me Feel Insecure', 'Seattle', 'Gay', '7-Up', 'thejacobschneider765@gmail.com', 'pfp.png'),
-('Wyatt Wilkins', 'I am a Bisexual Man Working in an Alpha-Male Dominated Field', 'Russia', 'Transexual', 'Board', 'may@gmail.com', 'pfp.png'),
-('Jim Bradford', 'Hearing CEO Erin Uritus Speak on Her Tour Stop in Atlanda Inspired Me', 'Portugal', 'Straight', 'Google', 'sprite@gmail.com', 'pfp.png');
+('Carissa Watson', 'My Experience as a Bisexual Woman in Fintech Industry Has Been A Positive One', 'New York', 'Gay', 'JP', 'dave@gmail.com', 'face1.jpeg'),
+('Heidi Weber', 'As a Lesbian in the South Working in a Tech Comany, it is Easy to Feel Out of Place', 'San Francisco', 'Gay', 'Sprite', 'jack@gmail.com', 'face2.jpg'),
+('Sam Chapman', 'As a Young man in Washington DC, It is Not Easy Being Queer', 'China', 'Lesbian', 'Coke', 'june@gmail.com', 'face3.jpeg'),
+('Jacob Schneider', 'Being Trans Man in the Midwest Makes Me Feel Insecure', 'Seattle', 'Gay', '7-Up', 'thejacobschneider765@gmail.com', 'face4.jpg'),
+('Wyatt Wilkins', 'I am a Bisexual Man Working in an Alpha-Male Dominated Field', 'Russia', 'Transexual', 'Board', 'may@gmail.com', 'face5.jpg'),
+('Jim Bradford', 'Hearing CEO Erin Uritus Speak on Her Tour Stop in Atlanda Inspired Me', 'Portugal', 'Straight', 'Google', 'sprite@gmail.com', 'face6.jpg');

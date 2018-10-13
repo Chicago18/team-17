@@ -165,7 +165,7 @@ body {
     font-weight: bold;
     font-size: 2rem;
     margin-top: 2rem;
-    width: 10px;
+    width: 250px;
     margin-left: 20px;
 }
 .name
@@ -179,8 +179,9 @@ body {
     height: 200px;
     position: relative;
     float: right;
-    top: -97px;
+    top: -170px;
     margin-left: 70px;
+    margin-top: 16px;
 
 }
 
