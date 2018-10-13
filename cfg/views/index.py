@@ -124,14 +124,25 @@ def profile(user):
                 'location': "", 'company': "", 'affiliation': "", 'username': user, 'name': ""}
     database = cfg.model.get_db()
     cur = database.cursor()
-    cur.execute("SELECT * FROM testimony")
-    for row in cur:
-        if user == row['name']:
-            context['email'] = row['email']
-            context['name'] = row['name']
-            context['location'] = row['location']
-            context['company'] = row['company']
-            context['affiliation'] = row['affiliation']
+    print(context['logname'], user)
+    if context['logname'] == user:
+        cur.execute("SELECT * FROM users")
+        for row in cur:
+            if user == row['username']:
+                context['email'] = row['email']
+                context['fullname'] = row['fullname']
+                context['location'] = row['location']
+                context['company'] = row['company']
+                context['affiliation'] = row['affiliation']
+    else:
+        cur.execute("SELECT * FROM testimony")
+        for row in cur:
+            if user == row['name']:
+                context['email'] = row['email']
+                context['name'] = row['name']
+                context['location'] = row['location']
+                context['company'] = row['company']
+                context['affiliation'] = row['affiliation']
     return flask.render_template("/profile.html", **context)
 
     # Discussion page
