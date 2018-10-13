@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask
+from flask import send_from_directory, abort
 import flask
 
 
@@ -25,9 +26,14 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    # a simple page that says hello
+    # Index page
     @app.route('/')
-    def hello():
+    def index():
         return flask.render_template("/index.html")
+
+    # Profile page
+    @app.route('/profile/')
+    def accounts():
+        return flask.render_template("/profile.html")
 
     return app
