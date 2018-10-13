@@ -16,3 +16,22 @@ input[type=text] {
 {
     text-align: center;
 }
+#submit
+{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+#signup
+{
+    color: black;
+    text-decoration: none;
+    border-style: solid;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+
+}
