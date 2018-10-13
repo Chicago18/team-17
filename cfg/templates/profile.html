@@ -25,13 +25,15 @@
             <li><a href="/resource/">Resources</a></li>
             <li><a href="/discussion/">Discussion</a></li>
             <li><a href="/testimony/">Testimonies</a></li>
-            <li><a href="/profile/">Profile</a></li>
+            <li><a href="/profile/{{ logname }}">Profile</a></li>
         </ul>
     </div>
 </nav>
 <body>
         <div class="jumbotron text-center">
-                <h1>{{ username }}</h1>
+                <h1>{{ name }}</h1>
+                <h1>{{ fullname }}</h1>
+                
                 <img src="/static/images/pic.jpeg">
               </div>
 
