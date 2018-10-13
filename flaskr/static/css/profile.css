@@ -1,0 +1,18 @@
+.form
+{
+    text-align: center;
+}
+input[type=text] {
+    width: 300px;
+    height: 10px;
+    padding: 12px 20px;
+    margin: 5px ;
+    border-radius: 20px;
+    clear: both;
+    text-align: center;
+    border-color: black;
+}
+.container
+{
+    text-align: center;
+}

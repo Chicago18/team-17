@@ -31,9 +31,9 @@ def create_app(test_config=None):
     def index():
         return flask.render_template("/index.html")
 
-    # Profile page
-    @app.route('/profile/')
+    # Sign up page
+    @app.route('/signup/')
     def accounts():
-        return flask.render_template("/profile.html")
+        return flask.render_template("/signup.html")
 
     return app
