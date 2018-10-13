@@ -42,6 +42,7 @@
                   <div class="col-sm-4">
                     <h3>Location</h3>
                     <p>{{ location }}</p>
+
                   </div>
                   <div class="col-sm-4">
                     <h3>Information</h3>
@@ -55,9 +56,12 @@
                   </div>
                 </div>
               </div>
+              <form action="{{ url_for('show_logout') }}" id="logout" class="form" method="post">
+                    <input type="submit" id="submit" name="logout" value="logout">
+                </form>
+              <style>.embed-container {position: relative; padding-bottom: 64%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe
+                    {position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="940" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Out and Equal" src="https://arcgis.com/apps/webappviewer/index.html?id=b1f119bf1a974443a05499af07339157"></iframe></div>
 </body>
-<form action="{{ url_for('show_logout') }}" id="logout" class="form" method="post">
-    <input type="submit" id="submit" name="logout" value="logout">
-</form>
+
 <br>
 </html>
