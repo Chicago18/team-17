@@ -3,7 +3,26 @@
 LGBTQ+ people in the workforce need a medium to connect to resources and 
 to other people in the LGBTQ+ workforce.
 http://ec2-18-222-130-52.us-east-2.compute.amazonaws.com/login/
+
 # Solution
 * People to resources
 * ERG to ERG
 * People to people
+
+# Built With
+* Python
+* HTML CSS
+* MySQL
+* Flask
+* Adobe XD
+* Bootstrap3
+* Jinja2
+* Friendship
+
+# Team Members
+* Jonny Chow - University of Michigan, Ann Arbor
+* Drew Davis - University of Michigan, Ann Arbor
+* Vincent Enierga - Univeristy of North Carolina at Chapel Hill
+* Parmveer Banwait - University of Iowa
+* Reeya Desai - Univeristy of Michigan, Ann Arbor
+* Daniel Wu - University of Michigan, Ann Arbor
