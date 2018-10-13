@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="/">Out and Equal</a>
@@ -31,30 +31,30 @@
 </nav>
 <body>
         <div class="jumbotron text-center">
-                <h1>{{ logname }}</h1>
+                <h1>{{ fullname }}</h1>
                 <img src="/static/images/pic.jpeg">
               </div>
-              
+
               <div class="container">
                 <div class="row">
                   <div class="col-sm-4">
                     <h3>Location</h3>
-                    <p>Lorem ipsum dolor..</p>
-                    <p>Ut enim ad..</p>
+                    <p>{{ location }}</p>
                   </div>
                   <div class="col-sm-4">
                     <h3>Affiliation</h3>
-                    <p>Lorem ipsum dolor..</p>
+                    <p>{{ affiliation }}</p>
                   </div>
                   <div class="col-sm-4">
-                    <h3>Contact</h3> 
-                    <p>Email</p>
-                    <p>Address</p>
+                    <h3>Contact</h3>
+                    <p>Email: {{ email }}</p>
+                    <p>Address:</p>
                   </div>
                 </div>
               </div>
 </body>
-<form action="{{ url_for('show_logout') }}" class="form" method="post">
+<form action="{{ url_for('show_logout') }}" id="logout" class="form" method="post">
     <input type="submit" id="submit" name="logout" value="logout">
 </form>
+<br>
 </html>

@@ -135,8 +135,18 @@ def show_delete():
 def profile():
     if 'username' not in flask.session:
         return flask.redirect(flask.url_for('show_login'))
-    context = {'logname': flask.session['username'], 'posts': []}
-
+    context = {'logname': flask.session['username'], 'email': "", 'fullname': "",
+                'location': "", 'company': "", 'affiliation': ""}
+    database = cfg.model.get_db()
+    cur = database.cursor()
+    cur.execute("SELECT * FROM users") 
+    for row in cur:
+        if context['logname'] == row['username']:
+            context['email'] = row['email']
+            context['fullname'] = row['fullname']
+            context['location'] = row['location']
+            context['company'] = row['company']
+            context['affiliation'] = row['affiliation']
     return flask.render_template("/profile.html", **context)
 
     # Discussion page

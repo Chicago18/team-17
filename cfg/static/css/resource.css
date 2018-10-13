@@ -31,7 +31,7 @@ body {
 }
 
 .content {
-    background-color: #bce0fd;
+    background-color: #2699fb;
     padding: 2rem;
     padding-bottom: 6rem;
     border-bottom: 1px solid black
@@ -50,7 +50,7 @@ body {
 }
 
 .postedBy {
-    color: #50a5d0;
+    color: #2699fb;
     font-size: 1.2rem;
     float: right;
     margin-top: 3rem;
