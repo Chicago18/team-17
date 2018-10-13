@@ -53,4 +53,9 @@ def create_app(test_config=None):
     def discussion():
         return flask.render_template("/discussion.html")
 
+    # Resource page
+    @app.route('/resource/')
+    def resource():
+        return flask.render_template("/resource.html")
+
     return app

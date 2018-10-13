@@ -1,0 +1,136 @@
+body {
+    margin: 0
+}
+
+.navbar {
+    border-radius: 0;
+    background-color: #2699fb;
+    color: white !important;
+    border: none;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.navbar-brand {
+    color: white !important
+}
+
+.container {
+    padding-top: 7rem
+}
+
+.navbar-right a {
+    color: white !important
+}
+
+.post,
+.thumb {
+    border: 1px solid black;
+    margin-top: 3rem
+}
+
+.content {
+    background-color: #bce0fd;
+    padding: 2rem;
+    padding-bottom: 6rem;
+    border-bottom: 1px solid black
+}
+
+.postHead {
+    font-size: 1.8rem;
+    color: grey;
+    padding-top: 3rem
+}
+
+.postBody {
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: grey;
+}
+
+.postedBy {
+    color: #50a5d0;
+    font-size: 1.2rem;
+    float: right;
+    margin-top: 3rem;
+}
+
+.commentBox textarea {
+    width: 100%;
+    border: none;
+    padding: 6rem
+}
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2699fb;
+    overflow-x: hidden;
+    padding-top: 20px;
+    z-index: -1;
+    padding-top: 6rem
+}
+
+.sidenav .btn {
+    color: #2699fb;
+    padding: 1rem 2.5rem;
+    background-color: white
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: white;
+    display: block;
+    margin-top: 1.5rem
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 200px;
+}
+
+.thumbContent {
+    background-color: #bce0fd;
+    padding: 2rem;
+    padding-bottom: 6rem;
+    border-bottom: 1px solid black
+}
+
+.thumbnail {
+    background-color: #43e9c6;
+    border-bottom: 1px solid black;
+    border-radius: 0 !important;
+    padding: 2rem;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0
+}
+
+.thumbHead {
+    font-size: 1.8rem;
+    color: grey;
+    padding-top: 3rem
+}
+
+.thumbBody {
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: grey;
+}
+
+.thumbBy {
+    color: #50a5d0;
+    font-size: 1.2rem;
+    float: right;
+    margin-top: 3rem;
+}
