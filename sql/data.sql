@@ -4,10 +4,10 @@ VALUES
 
 INSERT INTO resources(name, body, person)
 VALUES
-("The Oxford English Dictionary Added 'Trans*.' Here's What the Label Means", "Precious Brady Davis says that she uses the label trans* to describe herself because it’s 'undefinable.' While that may be true in some senses, the experts at the Oxford English Dictionary have still given it their best shot.", 'KATY STEINMETZ'),
-('An Equal Chance at Love: Why We Should Recognize Same-Sex Marriage', 'The debate about same-sex marriage often seems limited to two points of view. According to one, opposing the judicial invalidation of traditional marriage laws is tantamount to supporting segregationist racism.', 'JASON LEE STEORTS'),
-('Out & Equal at Work: From Closet to Corner Office', 'A major change is underway in today s workplace. Out & Equal at Work: From Closet to Corner Office is a groundbreaking anthology which chronicles personal narratives from straight allies and lesbian, gay, bisexual, and transgender (LGBT) executives and workplace leaders who have conquered adversity and ushered in policies that affirm and support the LGBT community in the workplace. ', 'Selisse Berry'),
-('Allies at Work: Creating a Lesbian, Gay, Bisexual and Transgender Inclusive Work Environment', 'Dr. David M. Hall began his lesbian, gay, bisexual and transgender advocacy work while he was just a teenager. ', 'Dr. David M. Hall ');
+("The Oxford English Dictionary Added 'Trans*.' Here's What the Label Means", "Precious Brady Davis says that she uses the label trans* to describe herself because it’s 'undefinable.' While that may be true in some senses, the experts at the Oxford English Dictionary have still given it their best shot.", 'KATY STEINMETZ', "2018/04/23"),
+('An Equal Chance at Love: Why We Should Recognize Same-Sex Marriage', 'The debate about same-sex marriage often seems limited to two points of view. According to one, opposing the judicial invalidation of traditional marriage laws is tantamount to supporting segregationist racism.', 'JASON LEE STEORTS, "2018/02/10"'),
+('Out & Equal at Work: From Closet to Corner Office', 'A major change is underway in today s workplace. Out & Equal at Work: From Closet to Corner Office is a groundbreaking anthology which chronicles personal narratives from straight allies and lesbian, gay, bisexual, and transgender (LGBT) executives and workplace leaders who have conquered adversity and ushered in policies that affirm and support the LGBT community in the workplace. ', 'Selisse Berry', "2018/02/22"),
+('Allies at Work: Creating a Lesbian, Gay, Bisexual and Transgender Inclusive Work Environment', 'Dr. David M. Hall began his lesbian, gay, bisexual and transgender advocacy work while he was just a teenager. ', 'Dr. David M. Hall ', "2017/12/20");
 
 INSERT INTO discussion(post, body, person)
 VALUES

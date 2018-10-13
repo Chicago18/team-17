@@ -161,9 +161,6 @@ def discussion():
     database = cfg.model.get_db()
     cur = database.cursor()
 
-    #if (request to sort by most recent):
-    #if (request to sort by category):
-    #if (request to sort by alphabetical): (ELSE)
     cur.execute("SELECT * FROM discussion ORDER BY post")
     for row in cur:
         context['discussion'].append(row)
