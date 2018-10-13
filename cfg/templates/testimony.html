@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/navbar.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/static/css/disc.css">
+    <link rel="stylesheet" href="/static/css/testimony.css">
 </head>
 
 <body>
-    <nav class="navbar navbar">
+    <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Out and Equal</a>
@@ -33,32 +32,34 @@
             </ul>
         </div>
     </nav>
-    <div class="jumbotron text-center">
-            <div class="container">
-                <h1>Discussion</h1>
-            </div>
-        </div>
+
     <div class="container">
-        {% for item in discussion %}
-        <div class="post">
-            <div class="content">
-                <div class="postHead">
-                   {{ item.post }}
+       
+            
+                    {% for test in testimonies %}
+                <div class="menuItem">
+                        
+                            <div class="name">
+                                <a href="/profile/{{ test.name }}/">{{ test.name }}</a>
+                            </div>
+                            <div class="menuHead">
+                                {{ test.title }}
+                            </div>
+                            <div class="menuText">
+                                {{ test.person }}
+                            </div>
+                            
+                        
+                            <img src="/static/images/flag.jpg" class="bigpic" alt="">
+                        
+                 
                 </div>
-                <div class="postBody">
-                    {{ item.body }}
-                </div>
-                <div class="postedBy">
-                    {{ item.person }}
-                </div>
-            </div>
-            <div class="commentBox">
-                <textarea name="" id="" placeholder="Comments.." rows="6"></textarea>
-            </div>
-        </div>
-        {% endfor %}
-        
+                {% endfor %}
+           
+   
+      
     </div>
+
 </body>
 
 </html>

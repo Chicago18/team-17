@@ -8,3 +8,4 @@ __pycache__/
 env/
 var/
 flaskr/__pycache__/
+views/__pycache__/

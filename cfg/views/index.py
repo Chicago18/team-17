@@ -115,35 +115,20 @@ def show_create():
     return flask.render_template("/signup.html")
 
 
-@cfg.app.route('/accounts/delete/', methods=['GET', 'POST'])
-def show_delete():
-    """Delete account page."""
-    if 'username' not in flask.session:
-        return flask.redirect(flask.url_for('show_login'))
-
-    context = {'logname': flask.session['username']}
-
-    if flask.request.method == 'POST':
-        delete_account()
-        return flask.redirect(flask.url_for('show_create'))
-
-    return flask.render_template("accountsDelete.html", **context)
-
-
  # Profile page
-@cfg.app.route('/profile/', methods=['GET', 'POST'])
-def profile():
+@cfg.app.route('/profile/<path:user>/', methods=['GET', 'POST'])
+def profile(user):
     if 'username' not in flask.session:
         return flask.redirect(flask.url_for('show_login'))
     context = {'logname': flask.session['username'], 'email': "", 'fullname': "",
-                'location': "", 'company': "", 'affiliation': ""}
+                'location': "", 'company': "", 'affiliation': "", 'username': user, 'name': ""}
     database = cfg.model.get_db()
     cur = database.cursor()
-    cur.execute("SELECT * FROM users") 
+    cur.execute("SELECT * FROM testimony") 
     for row in cur:
-        if context['logname'] == row['username']:
+        if user == row['name']:
             context['email'] = row['email']
-            context['fullname'] = row['fullname']
+            context['name'] = row['name']
             context['location'] = row['location']
             context['company'] = row['company']
             context['affiliation'] = row['affiliation']
@@ -154,7 +139,16 @@ def profile():
 def discussion():
     if 'username' not in flask.session:
         return flask.redirect(flask.url_for('show_login'))
-    context = {'logname': flask.session['username'], 'posts': []}
+    context = {'logname': flask.session['username'], 'discussion': []}
+
+    database = cfg.model.get_db()
+    cur = database.cursor()
+    cur.execute("SELECT * FROM discussion")
+    for row in cur:
+        context['discussion'].append(row)
+
+    # Saves changes
+    database.commit()
     return flask.render_template("/discussion.html", **context)
 
     # Resource page
@@ -162,8 +156,36 @@ def discussion():
 def resource():
     if 'username' not in flask.session:
         return flask.redirect(flask.url_for('show_login'))
-    context = {'logname': flask.session['username'], 'posts': []}
-    return flask.render_template("/resource.html", **context)
+    context = {'logname': flask.session['username'], 'resources': []}
+
+    database = cfg.model.get_db()
+    cur = database.cursor()
+    
+    cur.execute("SELECT * FROM resources")
+    for row in cur:
+        context['resources'].append(row)
+
+    # Saves changes
+    database.commit()
+
+    return flask.render_template("/resource.html", **context) 
+
+@cfg.app.route('/testimony/', methods=['GET', 'POST'])
+def testimony():
+    if 'username' not in flask.session:
+        return flask.redirect(flask.url_for('show_login'))
+    context = {'logname': flask.session['username'], 'testimonies': []}
+
+    database = cfg.model.get_db()
+    cur = database.cursor()
+    
+    cur.execute("SELECT * FROM testimony")
+    for row in cur:
+        context['testimonies'].append(row)
+
+    # Saves changes
+    database.commit()
+    return flask.render_template("/testimony.html", **context)
 
 
 
