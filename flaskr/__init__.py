@@ -43,9 +43,14 @@ def create_app(test_config=None):
     def login():
         return flask.render_template("/login.html")
 
-    # Login page
+    # Profile page
     @app.route('/profile/')
     def profile():
         return flask.render_template("/profile.html")
+
+    # Discussion page
+    @app.route('/discussion/')
+    def discussion():
+        return flask.render_template("/discussion.html")
 
     return app
