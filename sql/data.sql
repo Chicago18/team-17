@@ -1,6 +1,6 @@
-INSERT INTO users(username, fullname, location, email, company, affiliation, password)
+INSERT INTO users(username, fullname, location, email, company, affiliation, password, img_url)
 VALUES
-('jonny', 'Jonny Chow', 'Michigan', 'jonnny@umich.edu', 'JP Morgan', 'Straight', 'password');
+('jonny', 'Jonny Chow', 'Michigan', 'jonnny@umich.edu', 'JP Morgan', 'Straight', 'password', 'ben10.png');
 
 INSERT INTO resources(name, body, person)
 VALUES
@@ -17,10 +17,10 @@ VALUES
 ('EMPLOYERS RECOGNIZE IMPORTANCE OF LGBT BENEFITS TO ACCOMMODATE EVOLVING WORKFORCE, NEW MERCER SURVEY FINDS', 'The expansion of lesbian, gay, bisexual, and transgender (LGBT) rights and awareness has had profound impacts worldwide. As norms shift in society and the court of law, organizations are reassessing how they address LGBT-rights issues. ', 'Miriam Siscovick'),
 ('TALKING ABOUT RELIGIOUS EXEMPTIONS LAWS', 'Talking About Religious Exemptions Laws is a guide to building effective conversations about the ways in which harmful religious exemptions threaten not only laws that protect lesbian, gay, bisexual and transgender (LGBT) people from discrimination, but also health care (including women’s reproductive freedom), public safety, and more.', 'Howie');
 
-INSERT INTO testimony(name, title, location, affiliation, company, email)
+INSERT INTO testimony(name, title, location, affiliation, company, email, img_url)
 VALUES
-('Dave Kim', 'FDlksjfalkjsdfjsdlfjsdaf', 'New York', 'Gay', 'JP', 'dave@gmail.com'),
-('Jack The', 'FDlksjfalkjsdfjsdlfjsdaf', 'San Francisco', 'Gay', 'Sprite', 'jack@gmail.com'),
-('June June', 'FDlksjfalkfsdjsdfjsdlfjsdaf', 'China', 'Lesbian', 'Coke', 'june@gmail.com'),
-('May Thee', 'FDlksjfalkjsfdsadfjsdlfjsdaf', 'Russia', 'Transexual', 'Board', 'may@gmail.com'),
-('Sprite Coke', 'FDlksjfalkjsfsadfjsdlfjsdaf', 'Portugal', 'Straight', 'Google', 'sprite@gmail.com');
+('Dave Kim', 'FDlksjfalkjsdfjsdlfjsdaf', 'New York', 'Gay', 'JP', 'dave@gmail.com', 'pfp.png'),
+('Jack The', 'FDlksjfalkjsdfjsdlfjsdaf', 'San Francisco', 'Gay', 'Sprite', 'jack@gmail.com', 'pfp.png'),
+('June June', 'FDlksjfalkfsdjsdfjsdlfjsdaf', 'China', 'Lesbian', 'Coke', 'june@gmail.com', 'pfp.png'),
+('May Thee', 'FDlksjfalkjsfdsadfjsdlfjsdaf', 'Russia', 'Transexual', 'Board', 'may@gmail.com', 'pfp.png'),
+('Sprite Coke', 'FDlksjfalkjsfsadfjsdlfjsdaf', 'Portugal', 'Straight', 'Google', 'sprite@gmail.com', 'pfp.png');

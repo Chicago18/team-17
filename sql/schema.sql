@@ -6,6 +6,7 @@ CREATE TABLE users(
   company VARCHAR(20) NOT NULL,
   affiliation VARCHAR(20) NOT NULL,
   password VARCHAR(256) NOT NULL,
+  img_url VARCHAR(20) NOT NULL,
   created DATETIME default current_timestamp NOT NULL,
   PRIMARY KEY (username)
 );
@@ -31,5 +32,6 @@ CREATE TABLE testimony(
   affiliation VARCHAR(20) NOT NULL,
   company VARCHAR(20) NOT NULL,
   email VARCHAR(20) NOT NULL,
+  img_url VARCHAR(20) NOT NULL,
   PRIMARY KEY (name)
 );

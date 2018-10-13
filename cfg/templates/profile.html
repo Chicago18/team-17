@@ -34,7 +34,7 @@
                 <h1>{{ name }}</h1>
                 <h1>{{ fullname }}</h1>
                 
-                <img src="/static/images/pic.jpeg">
+                <img src="{{ url_for('download_file', filename=img_url) }}" class="imgPost" alt="Picture" width=350>
               </div>
 
               <div class="container">

@@ -12,7 +12,11 @@ from flask import send_from_directory, abort
 import cfg
 
 
-
+@cfg.app.route('/uploads/<path:filename>')
+def download_file(filename):
+    """Download file images."""
+    return send_from_directory(cfg.app.config['UPLOAD_FOLDER'],
+                               filename)
 
 def create_account(form):
     """Create account."""  
@@ -121,7 +125,7 @@ def profile(user):
     if 'username' not in flask.session:
         return flask.redirect(flask.url_for('show_login'))
     context = {'logname': flask.session['username'], 'email': "", 'fullname': "",
-                'location': "", 'company': "", 'affiliation': "", 'username': user, 'name': ""}
+                'location': "", 'company': "", 'affiliation': "", 'username': user, 'name': "", 'img_url': ""}
     database = cfg.model.get_db()
     cur = database.cursor()
     print(context['logname'], user)
@@ -134,6 +138,7 @@ def profile(user):
                 context['location'] = row['location']
                 context['company'] = row['company']
                 context['affiliation'] = row['affiliation']
+                context['img_url'] = row['img_url']
     else:
         cur.execute("SELECT * FROM testimony") 
         for row in cur:
@@ -143,6 +148,7 @@ def profile(user):
                 context['location'] = row['location']
                 context['company'] = row['company']
                 context['affiliation'] = row['affiliation']
+                context['img_url'] = row['img_url']
     return flask.render_template("/profile.html", **context)
 
     # Discussion page
