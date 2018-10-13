@@ -6,6 +6,9 @@ to other people in the LGBTQ+ workforce.
 # Website
 http://ec2-18-222-130-52.us-east-2.compute.amazonaws.com/login/
 
+# Prototype
+https://xd.adobe.com/view/3a123a84-6ec7-4f64-44db-2af3dacc332c-4c23/
+
 # Solution
 * People to resources
 * ERG to ERG
