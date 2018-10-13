@@ -35,3 +35,7 @@ input[type=text] {
     border-radius: 20px;
 
 }
+.jumbotron
+{
+    background-color: aliceblue;
+}
