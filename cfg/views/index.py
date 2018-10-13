@@ -150,7 +150,7 @@ def profile(user):
                 context['img_url'] = row['img_url']
     return flask.render_template("/profile.html", **context)
 
-    # Discussion page
+# Discussion page
 @cfg.app.route('/discussion/', methods=['GET', 'POST'])
 def discussion():
     if 'username' not in flask.session:
@@ -159,6 +159,7 @@ def discussion():
 
     database = cfg.model.get_db()
     cur = database.cursor()
+
     cur.execute("SELECT * FROM discussion ORDER BY post")
     for row in cur:
         context['discussion'].append(row)

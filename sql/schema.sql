@@ -15,6 +15,7 @@ CREATE TABLE resources(
   name VARCHAR(10) NOT NULL,
   body VARCHAR(200) NOT NULL,
   person VARCHAR(20) NOT NULL,
+  created DATETIME default current_timestamp NOT NULL,
   PRIMARY KEY (name)
 );
 
