@@ -1,11 +1,11 @@
-"""Insta485 python package configuration."""
+
 
 from setuptools import setup
 
 setup(
-    name='insta485',
+    name='cfg',
     version='0.1.0',
-    packages=['insta485'],
+    packages=['cfg'],
     include_package_data=True,
     install_requires=[
         'Flask==0.12.2',
