@@ -32,13 +32,20 @@ def create_app(test_config=None):
         return flask.redirect(flask.url_for('login'))
 
     # Sign up page
-    @app.route('/signup/')
+    @app.route('/signup/', methods=['GET', 'POST'])
     def signup():
+        if flask.request.method == 'POST':
+            create_account(flask.request.form, flask.request.files['file'])
         return flask.render_template("/signup.html")
 
     # Login page
     @app.route('/login/')
     def login():
         return flask.render_template("/login.html")
+
+    # Login page
+    @app.route('/profile/')
+    def profile():
+        return flask.render_template("/profile.html")
 
     return app
