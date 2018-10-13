@@ -33,7 +33,12 @@ def create_app(test_config=None):
 
     # Sign up page
     @app.route('/signup/')
-    def accounts():
+    def signup():
         return flask.render_template("/signup.html")
+
+    # Login page
+    @app.route('/login/')
+    def login():
+        return flask.render_template("/login.html")
 
     return app
