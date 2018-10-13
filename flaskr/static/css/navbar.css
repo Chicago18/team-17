@@ -1,24 +1,13 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+.navbar {
+    border-radius: 0;
+    background-color: #2699fb;
+    color: white !important
 }
-
-li {
-    float: left;
+ 
+.navbar-brand {
+    color: white !important
 }
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
+ 
+.navbar-right a {
+    color: white !important
 }
