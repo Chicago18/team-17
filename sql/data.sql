@@ -23,5 +23,5 @@ VALUES
 ('Heidi Weber', 'As a Lesbian in the South Working in a Tech Comany, it is Easy to Feel Out of Place', 'San Francisco', 'Gay', 'Sprite', 'jack@gmail.com', 'face2.jpg'),
 ('Sam Chapman', 'As a Young man in Washington DC, It is Not Easy Being Queer', 'China', 'Lesbian', 'Coke', 'june@gmail.com', 'face3.jpeg'),
 ('Jacob Schneider', 'Being Trans Man in the Midwest Makes Me Feel Insecure', 'Seattle', 'Gay', '7-Up', 'thejacobschneider765@gmail.com', 'face4.jpg'),
-('Wyatt Wilkins', 'I am a Bisexual Man Working in an Alpha-Male Dominated Field', 'Russia', 'Transexual', 'Board', 'may@gmail.com', 'face5.jpg'),
+('Wyatt Wilkins', 'I am a Bisexual Man Working in an Alpha-Male Dominated Field', 'Russia', 'Transexual', 'Board', 'may@gmail.com', 'face10.jpg'),
 ('Jim Bradford', 'Hearing CEO Erin Uritus Speak on Her Tour Stop in Atlanda Inspired Me', 'Portugal', 'Straight', 'Google', 'sprite@gmail.com', 'face6.jpg');
