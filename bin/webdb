@@ -1,0 +1,76 @@
+#!/bin/bash
+
+
+# Stop on errors
+set -e
+
+# Sanity check command line options
+usage() {
+  echo "Usage: $0 (create|destroy|reset|dump)"
+}
+
+if [ $# -ne 1 ]; then
+  usage
+  exit 1
+fi
+
+db_path="var/cfg.sqlite3"
+
+# Parse argument.  $1 is the first argument
+case $1 in
+  "create")
+
+    if [ -f "$db_path" ]
+    then
+        echo "Error: database already exists"
+        exit 1
+    else
+        declare -a command_list=(
+            "mkdir -p var/uploads"
+            "sqlite3 $db_path < sql/schema.sql"
+            "sqlite3 $db_path < sql/data.sql"
+            "cp sql/uploads/* var/uploads/"
+        )
+        for str in "${command_list[@]}"
+        do
+            echo "+ $str" && eval "$str"
+        done
+    fi
+    ;;
+
+  "destroy")
+    declare -a command_list=(
+        "rm -rf $db_path var/uploads"
+    )
+    for str in "${command_list[@]}"
+    do
+        echo "+ $str" && eval "$str"
+    done
+    ;;
+
+  "reset")
+    declare -a command_list=(
+        "rm -rf $db_path var/uploads"
+        "mkdir -p var/uploads"
+        "sqlite3 $db_path < sql/schema.sql"
+        "sqlite3 $db_path < sql/data.sql"
+        "cp sql/uploads/* var/uploads/"
+    )
+    for str in "${command_list[@]}"
+    do
+        echo "+ $str" && eval "$str"
+    done
+    ;;
+
+  "dump")
+    sqlite3 -batch -line $db_path 'SELECT * FROM users'
+    sqlite3 -batch -line $db_path 'SELECT * FROM posts'
+    sqlite3 -batch -line $db_path 'SELECT * FROM likes'
+    sqlite3 -batch -line $db_path 'SELECT * FROM following'
+    sqlite3 -batch -line $db_path 'SELECT * FROM comments'
+    ;;
+  *)
+    usage
+    exit 1
+    ;;
+esac

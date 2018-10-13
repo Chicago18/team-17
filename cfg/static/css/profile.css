@@ -1,0 +1,63 @@
+.form
+{
+    text-align: center;
+}
+input[type=text] {
+    width: 300px;
+    height: 10px;
+    padding: 12px 20px;
+    margin: 5px ;
+    border-radius: 20px;
+    clear: both;
+    text-align: center;
+    border-color: #2699fb;
+}
+input[type=submit]
+{
+    color: #2699fb;
+    border-color: #2699fb;
+    border-style: solid;
+}
+.container
+{
+    text-align: center;
+}
+#submit
+{
+    border-style: solid;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    color: #2699fb;
+    margin-top: 20px;
+}
+#signup
+{
+    color: #2699fb;
+    text-decoration: none;
+    border-style: solid;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    border-radius: 20px;
+
+}
+.jumbotron
+{
+    background-color: aliceblue;
+}
+#logout
+{
+    text-align: right;
+}
+h1
+{
+    color: #2699fb !important;
+}
+.jumbotron
+{
+
+    background-color: white !important;
+}

@@ -1,0 +1,17 @@
+.navbar {
+    border-radius: 0;
+    background-color: #2699fb;
+    color: white !important
+}
+ 
+.navbar-brand {
+    color: white !important
+}
+ 
+.navbar-right a {
+    color: white !important
+}
+.container-fluid
+{
+    background-color: #2699fb;
+}
