@@ -27,6 +27,9 @@ CREATE TABLE discussion(
 CREATE TABLE testimony(
   name VARCHAR(20) NOT NULL,
   title VARCHAR(100) NOT NULL,
-  body VARCHAR(20) NOT NULL,
+  location VARCHAR(20) NOT NULL,
+  affiliation VARCHAR(20) NOT NULL,
+  company VARCHAR(20) NOT NULL,
+  email VARCHAR(20) NOT NULL,
   PRIMARY KEY (name)
 );
