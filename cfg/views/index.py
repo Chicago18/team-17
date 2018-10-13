@@ -111,7 +111,6 @@ def show_logout():
 def show_create():
     """Create account page."""
     if flask.request.method == 'POST':
-        print("yes")
         create_account(flask.request.form)
 
         return flask.redirect(flask.url_for('show_index'))
@@ -178,9 +177,15 @@ def resource():
     database = cfg.model.get_db()
     cur = database.cursor()
 
-    cur.execute("SELECT * FROM resources")
-    for row in cur:
-        context['resources'].append(row)
+    if flask.request.method == 'POST':
+        cur.execute("SELECT * FROM resources ORDER by name")
+        for row in cur:
+            context['resources'].append(row)
+        return flask.redirect(flask.url_for('resource'))
+    else:
+        cur.execute("SELECT * FROM resources")
+        for row in cur:
+            context['resources'].append(row)
 
     # Saves changes
     database.commit()
