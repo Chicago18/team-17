@@ -15,7 +15,7 @@ import cfg
 
 
 def create_account(form):
-    """Create account."""
+    """Create account."""  
     # Save uploaded file
 
     # User information
