@@ -30,7 +30,7 @@ def create_account(form):
     
     # User tried to create a password with empty string
     if password == "":
-        abort(400)
+        abort(400) 
 
     database = cfg.model.get_db()
     cur = database.cursor()
@@ -76,7 +76,7 @@ def show_index():
 @cfg.app.route('/login/', methods=['GET', 'POST'])
 def show_login():
     """Login page."""
-    context = {'logname': flask.session['username']}
+    context = {'logname': ""}
     if flask.request.method == 'POST':
         database = cfg.model.get_db()
         cur = database.cursor()
@@ -84,7 +84,8 @@ def show_login():
         password = flask.request.form['password']
         cur.execute("SELECT * FROM users")
         for row in cur:
-            if username == row['username'] and password == row['username']:
+            if username == row['username'] and password == row['password']:
+                print("found")
                 flask.session['username'] = username
                 context['logname'] = username
                 return flask.redirect(flask.url_for('resource'))
@@ -132,6 +133,8 @@ def show_delete():
  # Profile page
 @cfg.app.route('/profile/', methods=['GET', 'POST'])
 def profile():
+    if 'username' not in flask.session:
+        return flask.redirect(flask.url_for('show_login'))
     context = {'logname': flask.session['username'], 'posts': []}
 
     return flask.render_template("/profile.html", **context)
@@ -139,12 +142,16 @@ def profile():
     # Discussion page
 @cfg.app.route('/discussion/', methods=['GET', 'POST'])
 def discussion():
+    if 'username' not in flask.session:
+        return flask.redirect(flask.url_for('show_login'))
     context = {'logname': flask.session['username'], 'posts': []}
     return flask.render_template("/discussion.html", **context)
 
     # Resource page
 @cfg.app.route('/resource/', methods=['GET', 'POST'])
 def resource():
+    if 'username' not in flask.session:
+        return flask.redirect(flask.url_for('show_login'))
     context = {'logname': flask.session['username'], 'posts': []}
     return flask.render_template("/resource.html", **context)
 
