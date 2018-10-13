@@ -15,7 +15,7 @@ import cfg
 
 
 def create_account(form):
-    """Create account."""  
+    """Create account."""
     # Save uploaded file
 
     # User information
@@ -27,10 +27,10 @@ def create_account(form):
     affiliation = form['affiliation']
     password = form['password']
 
-    
+
     # User tried to create a password with empty string
     if password == "":
-        abort(400) 
+        abort(400)
 
     database = cfg.model.get_db()
     cur = database.cursor()
@@ -56,7 +56,7 @@ def create_account(form):
     # Saves changes
     database.commit()
     flask.session['username'] = username
-    
+
 
 
 
@@ -109,7 +109,7 @@ def show_create():
     if flask.request.method == 'POST':
         print("yes")
         create_account(flask.request.form)
-        
+
         return flask.redirect(flask.url_for('show_index'))
 
     return flask.render_template("/signup.html")
@@ -124,7 +124,7 @@ def profile(user):
                 'location': "", 'company': "", 'affiliation': "", 'username': user, 'name': ""}
     database = cfg.model.get_db()
     cur = database.cursor()
-    cur.execute("SELECT * FROM testimony") 
+    cur.execute("SELECT * FROM testimony")
     for row in cur:
         if user == row['name']:
             context['email'] = row['email']
@@ -143,7 +143,7 @@ def discussion():
 
     database = cfg.model.get_db()
     cur = database.cursor()
-    cur.execute("SELECT * FROM discussion")
+    cur.execute("SELECT * FROM discussion ORDER BY post")
     for row in cur:
         context['discussion'].append(row)
 
@@ -160,7 +160,7 @@ def resource():
 
     database = cfg.model.get_db()
     cur = database.cursor()
-    
+
     cur.execute("SELECT * FROM resources")
     for row in cur:
         context['resources'].append(row)
@@ -168,7 +168,7 @@ def resource():
     # Saves changes
     database.commit()
 
-    return flask.render_template("/resource.html", **context) 
+    return flask.render_template("/resource.html", **context)
 
 @cfg.app.route('/testimony/', methods=['GET', 'POST'])
 def testimony():
@@ -178,7 +178,7 @@ def testimony():
 
     database = cfg.model.get_db()
     cur = database.cursor()
-    
+
     cur.execute("SELECT * FROM testimony")
     for row in cur:
         context['testimonies'].append(row)
@@ -186,7 +186,3 @@ def testimony():
     # Saves changes
     database.commit()
     return flask.render_template("/testimony.html", **context)
-
-
-
-
